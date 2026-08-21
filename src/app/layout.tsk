@@ -1,0 +1,30 @@
+import type { Metadata } from "next";
+import "./globals.css";
+
+export const metadata: Metadata = {
+  title: {
+    default: "DigitalShelf",
+    template: "%s | DigitalShelf"
+  },
+  description:
+    "DigitalShelf is a modern digital library for discovering and reading ebooks online.",
+  keywords: [
+    "ebooks",
+    "digital library",
+    "books",
+    "online reading",
+    "DigitalShelf"
+  ]
+};
+
+export default function RootLayout({
+  children
+}: Readonly<{
+  children: React.ReactNode;
+}>) {
+  return (
+    <html lang="en">
+      <body>{children}</body>
+    </html>
+  );
+}
